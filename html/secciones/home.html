@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+
+    <style>
+        body {
+
+            background-image: url("../ElementosGraficos/Wallpaper_home.jpeg");
+
+
+
+        }
+
+        .navbar {
+            background-color: rgba(61, 97, 116, 0.562) !important;
+        }
+
+        .card {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.3cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 9.55cm;
+
+        }
+
+        .card1 {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.1cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 4.15cm;
+            overflow: hidden;
+            cursor: default;
+            box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+            transition: all 400ms ease;
+            
+        }
+
+        .card1:hover {
+
+            box-shadow: 6px 6px 20px rgba(0,0,0,0.4);
+            transform: translateX(-1%) ;
+
+
+        }
+
+        .card2 {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 9.55cm;
+
+
+        }
+
+        .card3 {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.3cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 8.5cm;
+            overflow: hidden;
+            cursor: default;
+            box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+            transition: all 400ms ease;
+
+        }
+
+        .card3:hover {
+            box-shadow: 6px 6px 20px rgba(0,0,0,0.4);
+            transform: translateX(-1%) ;
+        }
+
+        .card4 {
+            background-color: rgba(41, 73, 88, 0.144);
+            border-radius: 0.2cm;
+            border-color: rgba(68, 101, 117, 0.075);
+            height: 2.3cm;
+            width: 100%;
+            padding: 0cm;
+            margin: 0cm;
+            border-style: solid;
+        }
+
+        .container-fluid {
+
+            width: 95%;
+            align-items: center;
+
+        }
+
+        .container {
+
+
+            border-radius: 0.4cm;
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .container2 {
+
+            text-align: left;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: 3.7cm;
+
+        }
+
+        .container3 {
+
+            text-align: left;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: 6cm;
+            height: 2.2cm;
+
+
+        }
+
+        .container4 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: auto;
+            height: auto;
+
+
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .container5 {
+
+            text-align: left;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: 5.5cm;
+
+        }
+
+        .container6 {
+            background-color: rgba(95, 128, 145, 0.63);
+            border-radius: 0.4cm;
+            align-items: center;
+            padding: 0.2cm;
+            margin: 0cm;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: fit-content;
+        }
+
+        .textTitle {
+
+            color: azure;
+            font-size: 1.5cm;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        .textTitle1 {
+
+            font-size: 1cm;
+            color: azure;
+            font-size: 0.8cm;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .textTitle2 {
+            font-size: 0.45cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .textTitle22 {
+            font-size: 0.4cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .textTitle23 {
+            font-size: 0.4cm;
+            color: rgb(178, 182, 182);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .textTitle24 {
+            font-size: 0.35cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .textTitle25 {
+            font-size: 0.30cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .table {
+
+            background-color: rgba(129, 155, 168, 0);
+            width: 80mm;
+
+
+        }
+
+        .textCard3 {
+            font-size: 1cm;
+            color: azure;
+            font-size: 0.4cm;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .textCard2 {
+            font-size: 0.4cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .textCard4 {
+            font-size: 0.40cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .textCard5 {
+            font-size: 0.38cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+
+
+        }
+
+        .row {
+            background-color: rgba(95, 128, 145, 0.63);
+            border-radius: 0.4cm;
+            padding: 0.2cm;
+            margin: 0cm;
+
+        }
+
+        .row1 {
+            background-color: rgba(95, 128, 145, 0.493);
+            border-radius: 0.4cm;
+            height: 100%;
+            padding: 1cm;
+
+        }
+
+        .row3 {
+            
+            border-radius: 0.4cm;
+            padding: 0.0cm;
+            margin: 0cm;
+
+        }
+
+        .but1 {
+            background-color: rgba(41, 73, 88, 0.616);
+            border-radius: 0.2cm;
+            border-color: rgba(41, 73, 88, 0.616);
+            border-width: 0cm;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+            height: 3cm;
+            width: 100%;
+            padding: 0cm;
+            margin: 0cm;
+            border-style: solid;
+        }
+
+        .but1:hover {
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+            transform: translateX(-0.05%) ;
+        }
+
+        .but2 {
+            background-color: rgba(41, 73, 88, 0.616);
+            border-radius: 0.2cm;
+            border-color: rgba(68, 101, 117, 0.678);
+            border-width: 0cm;
+            height: 2cm;
+            width: 100%;
+            padding: 0cm;
+            margin: 0cm;
+            border-style: solid;
+        }
+
+        /*CSS BOTON*/
+    </style>
+
+
+</head>
+
+<body>
+
+    <!--CABECERA DE LA PAGINA-->
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand p-2">Home App</a>
+        <!--Etiquetas de la barra-->
+    </nav>
+
+    <!--CUERPO DE LA PAGINA-->
+
+    <div class="container-fluid">
+        <div class="col-xxl-12">
+            <div class="row" style="background-color: rgba(240, 248, 255, 0);">
+                <div class="col-xxl-3">
+                    <!--Tarjeta principal-->
+                    <div class="card">
+                        <h4 class="textTitle1" style="text-align: center;">Meirás (Sada)</h4>
+                        <br>
+                        <div class="row">
+
+                            <div class="col-6">
+                                <p class="textCard2" style="line-height: 100%">Nublado</p>
+                                <p style="font-size:1cm; color: aliceblue; line-height: 90%;" id="Temp">--</p>
+
+                                <spam class="textCard3">RealFeel&nbsp</spam>
+                                <spam class="textCard3" style="text-align: justify;" id="SenTemp">--</spam>
+                            </div>
+                            <div class="col-6" style="background-color: rgba(148, 89, 13, 0); margin:auto;">
+
+                                <div class="container-sm-3"
+                                    style="width: 3.5cm; align-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                    <img class="image" style="object-fit: cover;width: 100%; "
+                                        src="../ElementosGraficos/Sol_nubes_1.png" alt="Card image cap">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            
+                            <div class="col-4" style="background-color: rgba(0, 255, 255, 0); text-align: center; align-items: left; margin:0cm; padding: 0.1cm;">
+                                <div class="card4">
+                                    <div class="container"
+                                        style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 35%; margin-left: 0.15cm;">
+                                        <spam class="textTitle25" style="font-size: 0.5cm;">T</spam><spam class="textTitle25">emp</spam>
+                                    </div>
+                                
+                                    
+                                    <div class="container"
+                                        style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 70%;">
+                                        <h4 class="textTitle24"
+                                            style="text-align: left; margin-left: 0.15cm; margin-top: 0.13cm; line-height: 85%; font-weight: bold; font-size: 0.5cm;" id="MaxTemp">--
+                                            </h4>
+                                        <h4 class="textTitle25" id="MinTemp"
+                                            style="text-align: left; margin-left: 0.2cm; line-height: 50%; font-size: 0.4cm">
+                                            --</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4" style="background-color: rgba(0, 255, 255, 0); text-align: center; align-items: left; margin:0cm; padding: 0.1cm;">
+                                <div class="card4">
+                                    <div class="container"
+                                        style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 56%; margin-left: 0.15cm;">
+                                        <spam class="textTitle25" style="font-size: 0.5cm;">V</spam><spam class="textTitle25">ien</spam>
+                                    </div>
+                                
+                                    
+                                    <div class="container"
+                                        style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 37%;">
+                                        <spam class="textTitle24"
+                                            style="text-align: left; margin-left: 0.15cm; margin-top: 0.2cm; line-height: 85%; font-weight: bold; font-size: 0.6cm; font-size: 0.4cm" id="Vmed">--
+                                        </spam>
+                                        <spam class="textCard5" style="font-size: 0.3cm; margin-top: 0.2cm"> km</spam>
+                        
+                                    </div>
+                                </div>
+                                       
+                            </div>
+                            <div class="col-4" style="background-color: rgba(0, 255, 255, 0); text-align: center; align-items: left; margin:0cm; padding: 0.1cm;">
+                                <div class="card4">
+                                    <div class="container"
+                                        style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 56%; margin-left: 0.15cm;">
+                                        <spam class="textTitle25" style="font-size: 0.5cm;">H</spam><spam class="textTitle25">um</spam>
+                                    </div>
+                                
+                                    
+                                    <div class="container"
+                                        style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 37%;">
+                                        <spam class="textTitle24"
+                                            style="text-align: left; margin-left: 0.15cm; margin-top: 0.2cm; line-height: 85%; font-weight: bold; font-size: 0.6cm; font-size: 0.4cm" id="Hum">--
+                                        </spam>
+                                        <spam class="textCard5" style="font-size: 0.3cm; margin-top: 0.2cm"> %</spam>
+                        
+                                    </div>
+                                </div>
+                                       
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--Tarjeta principal END-->
+
+                </div>
+                <div class="col-xxl-6" style="background-color: rgba(127, 255, 212, 0);">
+
+                    <!--Tarjeta Gráfico-->
+                    <div class="card">
+                        <div class="row" style="background-color: rgba(240, 248, 255, 0); padding: 0.0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 90%">Hoy</h4>
+                        </div>
+                        <!--Subtarjeta Gráfico-->
+                        <div class="row" style="padding: 0cm; height: 8.2cm; margin-top:0.2cm;">
+                            <div class="container"
+                                style="padding: 0cm; width: 31cm; height: 7.9cm; align-items: center;">
+                                <div class="col-12" style="background-color: rgba(245, 245, 220, 0); height: 7.5cm;">
+                                    <canvas id="grafica"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3">
+
+                    <div class="card">
+                        <div class="row" style="background-color: rgba(240, 248, 255, 0); padding: 0.0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 90%">Controles</h4>
+                        </div>
+                        <div class="row" style="margin-top:0.2cm;">
+                            <div class="row"
+                                style="background-color: rgba(240, 248, 255, 0); padding: 0.1cm; margin: 0cm; margin-top: 0.1cm; margin-left: 0.1cm;">
+                                <h4 class="textTitle2" style="text-align: left; line-height: 50%;">Acceso</h4>
+                            </div>
+                            <!--Subtarjeta-->
+
+                            <div class="row" style="margin-bottom: 0.2cm; background-color: rgba(240, 248, 255, 0); padding: 0cm;" id="but">
+                                <div class="col-6" style="text-align: center;">
+                                    <button class="but1" id="R4but">
+                                        <div class="container"
+                                        style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.2cm; height: 30%;">
+                                        <img class="image" style="height: 140%;"
+                                            src="../ElementosGraficos/Portalon.png" alt="Card image cap">
+
+                                    </div>
+                                    <br>
+                                    <div class="container"
+                                        style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 70%;">
+                                        <h4 class="textTitle24"
+                                            style="text-align: left; margin-left: 0.15cm; margin-top: 0.4cm; font-weight: bold;">Portal
+                                            G</h4>
+                                        <h4 class="textTitle24" id="st4"
+                                            style="text-align: left; margin-left: 0.15cm; line-height: 0%; margin-bottom: 0.2cm;">
+                                            --</h4>
+                                    </div>
+                                    </button>
+                                </div>
+                                <div class="col-6" style="text-align: center;">
+                                    <button class="but1" id="R5but">
+                                        <div class="container"
+                                            style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.2cm; height: 30%;">
+                                            <img class="image" style="height: 140%;"
+                                                src="../ElementosGraficos/Portal.png" alt="Card image cap">
+                                                
+
+                                        </div>
+                                        <br>
+                                        
+                                        <div class="container"
+                                            style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 70%;">
+                                            <h4 class="textTitle24"
+                                                style="text-align: left; margin-left: 0.15cm; margin-top: 0.4cm; font-weight: bold;">Portal
+                                                P</h4>
+                                            <h4 class="textTitle24" id="st5"
+                                                style="text-align: left; margin-left: 0.15cm; line-height: 0%; margin-bottom: 0.2cm;">
+                                                --</h4>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Subtarjeta-->
+                        <div class="row" style="margin-top:0.3cm;">
+                            <div class="row"
+                                style="background-color: rgba(240, 248, 255, 0); padding: 0.1cm; margin: 0cm; margin-top: 0.1cm; margin-left: 0.1cm;">
+                                <h4 class="textTitle2" style="text-align: left; line-height: 50%">Riego</h4>
+                            </div>
+                            <!--Subtarjeta-->
+
+                            <div class="row" style="margin-bottom: 0.2cm; padding: 0cm; background-color: rgba(240, 248, 255, 0);" id="but">
+                                <div class="col-4">
+                                    <button class="but2" id="R1but">
+                                        <div class="container"
+                                            style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.2cm; height: 30%;">
+                                            <img class="image" style="height: 390%;"
+                                                src="../ElementosGraficos/Riego.png" alt="Card image cap">
+                                        </div>
+                                    
+                                        
+                                        <div class="container"
+                                            style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 70%;">
+                                            <h4 class="textTitle24"
+                                                style="text-align: left; margin-left: 0.15cm; margin-top: 0.4cm; line-height: 85%; font-weight: bold;">Zona 1
+                                                </h4>
+                                            <h4 class="textTitle25" id="st1"
+                                                style="text-align: left; margin-left: 0.15cm; line-height: 10%; margin-bottom: 0.2cm;">
+                                                --</h4>
+                                        </div>
+                                       
+                                    </button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="but2" id="R2but">
+                                        <div class="container"
+                                            style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.2cm; height: 30%;">
+                                            <img class="image" style="height: 390%;"
+                                                src="../ElementosGraficos/Riego.png" alt="Card image cap">
+                                        </div>
+                                    
+                                        
+                                        <div class="container"
+                                            style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 70%;">
+                                            <h4 class="textTitle24"
+                                                style="text-align: left; margin-left: 0.15cm; margin-top: 0.4cm; line-height: 85%; font-weight: bold;">Zona 2
+                                                </h4>
+                                            <h4 class="textTitle25" id="st2"
+                                                style="text-align: left; margin-left: 0.15cm; line-height: 10%; margin-bottom: 0.2cm;">
+                                                --</h4>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="but2" id="R3but">
+                                        <div class="container"
+                                            style="background-color:rgba(127, 255, 212, 0); text-align: left; border-radius: 0cm; padding:0.2cm; height: 30%;">
+                                            <img class="image" style="height: 390%;"
+                                                src="../ElementosGraficos/Riego.png" alt="Card image cap">
+                                        </div>
+                                    
+                                        
+                                        <div class="container"
+                                            style="background-color:rgba(39, 119, 92, 0); text-align: left; border-radius: 0cm; padding:0.1cm; height: 70%;">
+                                            <h4 class="textTitle24"
+                                                style="text-align: left; margin-left: 0.15cm; margin-top: 0.4cm; line-height: 85%; font-weight: bold;">Zona 3
+                                                </h4>
+                                            <h4 class="textTitle25" id="st3"
+                                                style="text-align: left; margin-left: 0.15cm; line-height: 10%; margin-bottom: 0.2cm;">
+                                                --</h4>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--Tarjeta Datos Meteorlógicos-->
+        <div class="col-12">
+            <div class="row" style="padding:0.5cm ;">
+                <div class="col-lg-3">
+                    <!--Tarjeta Temperatura-->
+                    <a href="../index.html" class='card-trip' style="text-decoration: none">
+                    <div class="card1">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Temperatura</h4>
+                        </div>
+                        <!--Subtarjeta Temperatura-->
+                        <div class="container">
+                            <div class="row" id="TempRow">
+                                <div class="col-9" style="background-color: rgba(220, 222, 245, 0);">
+                                    <spam class="textCard2" style="line-height: 100%" id="StrTemp">--</spam>
+                                    <br>
+                                    <spam class="textCard4">Actual&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Temp1">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">Sensación&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="SenTemp1">--</spam>
+                                    <br>
+
+                                </div>
+                                <div class="col-2" style="background-color: rgba(148, 89, 13, 0); margin:auto; ">
+
+                                    <div class="container-sm-3"
+                                        style="width: 0.7cm; align-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="object-fit: cover;width: 100%; "
+                                            src="../ElementosGraficos/Termómetro.png" alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>
+                    </div>
+
+
+                    <!--Tarjeta Humedad-->
+                    <div class="card1">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Humedad</h4>
+                        </div>
+                        <!--Subtarjeta Humedad-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9" style="background-color: rgba(245, 245, 220, 0);">
+                                    <spam class="textCard2" style="line-height: 100%" id="StrHum">--</spam>
+                                    <br>
+                                    <spam class="textCard4">H relativa&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Hum1">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">T
+                                        rocío&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="#">--</spam>
+
+
+                                </div>
+                                <div class="col-2" style="background-color: rgba(148, 89, 13, 0); margin: auto;">
+
+                                    <div class="container-sm-3"
+                                        style="width: 0.9cm; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="width: 100%; ;" src="../ElementosGraficos/Agua.png"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+
+                    <!--Tarjeta Presión-->
+                    <div class="card1">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Presión</h4>
+                        </div>
+                        <!--Subtarjeta Presión-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9" style="background-color: rgba(245, 245, 220, 0);">
+                                    <p class="textCard2" style="line-height: 100%">Anticiclón</p>
+                                    <spam class="textCard4">Actual&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Pre">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">Evolución&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="#">↓↓</spam>
+
+                                </div>
+                                <div class="col-3" style="background-color: rgba(148, 89, 13, 0); margin: auto;">
+
+                                    <div class="container-sm-3"
+                                        style="width: 0.7cm; align-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="width: 180%; ;" src="../ElementosGraficos/Presion.png"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tarjeta Precipitación-->
+                    <div class="card1">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Precipitación</h4>
+                        </div>
+                        <!--Subtarjeta Precipitación-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9" style="background-color: rgba(245, 245, 220, 0);">
+                                    <p class="textCard2" style="line-height: 100%">Calma</p>
+                                    <spam class="textCard4">Hoy&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Prec">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">Semana&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="Prec1">--</spam>
+
+                                </div>
+                                <div class="col-3" style="background-color: rgba(148, 89, 13, 0); margin: auto;">
+
+                                    <div class="container-sm-3"
+                                        style="width: 0.7cm; align-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="width: 160%; ;"
+                                            src="../ElementosGraficos/Lluvia_intensa.png" alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <!--Tarjeta Vientos -->
+                    <div class="card3">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Viento</h4>
+                        </div>
+                        <!--Subtarjeta 1 Style JS-->
+                        <div class="container" style="height:30%;">
+                            <div class="row" id="WindRow">
+                                <div class="col-9">
+                                    <spam class="textCard2" style="line-height: 100%" id="StrViento">--</spam>
+                                    <br>
+                                    <spam class="textCard4">Actual&nbsp</spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Vmed1">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">Racha&nbsp&nbsp</spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="Vmax">--</spam>
+                                </div>
+                                <div class="col-3"><br>
+                                    <div class="container-sm-3"
+                                        style="width: 0.9cm; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="width: 100%; ;" src="../ElementosGraficos/Viento.png"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container" style="background-color: rgba(0, 255, 255, 0); height: 55%;">
+                            <div class="row" style="height: 88%;">
+
+                                <div class="container4" id="DirViento"
+                                    style="height: 88%; align-items: center; justify-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                    --</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-3">
+                    <!--Tarjeta Presión-->
+                    <div class="card1">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Calidad Aire</h4>
+                        </div>
+                        <!--Subtarjeta Presión-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9" style="background-color: rgba(245, 245, 220, 0);">
+                                    <p class="textCard2" style="line-height: 100%">Buena</p>
+                                    <spam class="textCard4">Actual&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Hum">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">Evolución&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="#">--</spam>
+
+                                </div>
+                                <div class="col-3" style="background-color: rgba(148, 89, 13, 0); margin: auto;">
+
+                                    <div class="container-sm-3"
+                                        style="width: 0.7cm; align-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="width: 150%; ;" src="../ElementosGraficos/Qair.png"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Tarjeta Precipitación-->
+                    <div class="card1">
+                        <div class="row"
+                            style="background-color: rgba(240, 248, 255, 0); padding: 0.2cm; margin: 0.25cm; margin-top: 0.12cm; margin-bottom: 0cm;">
+                            <h4 class="textTitle2" style="text-align: left; line-height: 50%">Luminosidad</h4>
+                        </div>
+                        <!--Subtarjeta Precipitación-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9" style="background-color: rgba(245, 245, 220, 0);">
+                                    <p class="textCard2" style="line-height: 100%">Claro</p>
+                                    <spam class="textCard4">Salida&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="line-height: 90%;" id="Sal">--</spam>
+                                    <br>
+                                    <spam class="textCard4" style="line-height: 100%">Puesta&nbsp&nbsp&nbsp
+                                    </spam>
+                                    <spam class="textCard5" style="text-align: justify;" id="Pue">--</spam>
+
+                                </div>
+                                <div class="col-3" style="background-color: rgba(148, 89, 13, 0); margin: auto;">
+
+                                    <div class="container-sm-3"
+                                        style="width: 0.7cm; align-items: center; background-color: rgba(0, 255, 255, 0); ">
+                                        <img class="image" style="width: 160%; ;" src="../ElementosGraficos/lux.png"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+           
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!--INCUIR LA HERRAMIENTA JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!--LLAMADA A UN .JS DESDE HTML-->
+    <script src="../Graficas/plotMeteoData.js"></script>
+    <script src="../Operaciones/getMeteoData.js"></script>
+    <script src="../Operaciones/setStyleData.js"></script>
+    <script src="../Operaciones/SetReleValue.js"></script>
+    <script src="../Operaciones/setStyleButton.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!--Website Title-->
+    <title>Home App Loging</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <style>
+        body {
+
+            background-image: url("ElementosGraficos/Wallpaper_home.jpeg");
+            background-repeat: repeat;
+            background-size: 100%;
+            
+
+        }
+        .card {
+            background-color: rgba(129, 155, 168, 0.795);
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .card-header {
+            background-color: rgba(54, 67, 73, 0.473);
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .form-control{
+            background-color: rgba(54, 67, 73, 0.473);
+            border: 0ch;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .btn{
+            background-color: rgb(51, 82, 95);
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .text-muted{
+            color:white !important;
+        }
+
+    </style>
+</head>
+
+</head>
+
+<body>
+    <header>
+         <!--Include header here-->
+    </header>
+    <main>
+
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+
+                <div class="col-md-4">
+                    <br>
+                    <form action="secciones/home.html" method="post">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h4>Inicio de session</h4>
+                            </div>
+                            <div class="card-body">
+
+                                <br>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Usuario</label>
+                                    <input type="text" class="form-control" name="usuario" id="usuario"
+                                        aria-describedby="helpId" placeholder="usuario">
+
+                                    <small id="helpId" class="form-text text-muted">Escriba su usuario</small>
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" name="contrasenia" id="contrasenia"
+                                        aria-describedby="helpId" placeholder="password">
+
+                                    <small id="helpId" class="form-text text-muted">Escriba su contraseña</small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!--Include footer here-->
+    </footer>
+</body>
+
+</html>

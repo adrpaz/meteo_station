@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+    
+            background-image: url("../ElementosGraficos/Wallpaper_home.jpeg");
+    
+    
+        }
+    
+        .navbar {
+            background-color: rgba(61, 97, 116, 0.562) !important;
+        }
+    
+        .card {
+            background-color: rgba(129, 155, 168, 0.795);
+            padding: 0.3cm;
+            height: 10cm;
+           
+            
+        }
+    
+        .card1 {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.4cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 4.85cm;
+
+            
+    
+        }
+        .card2 {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.4cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 15.15cm;
+        
+        }
+        .card3 {
+            background-color: rgba(129, 155, 168, 0.795);
+            border-radius: 0.5cm;
+            padding: 0.3cm;
+            margin-top: 0.25cm;
+            margin-bottom: 0.25cm;
+            height: 20cm;
+        }
+        .containerMain {
+            
+            text-align: left;
+            padding: 2cm;
+            margin: 2mm;
+           
+
+        }
+    
+        .container1 {
+    
+    
+            padding: 0.3cm;
+            margin: 2mm;
+            width: 8cm;
+    
+        }
+    
+        .container2 {
+    
+            text-align: left;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: 3.7cm;
+    
+        }
+    
+        .container3 {
+    
+            text-align: left;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: 6cm;
+            height: 2.2cm;
+            
+    
+        }
+    
+        .container4 {
+    
+            text-align: center;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: auto;
+            width: 50%;
+            
+            margin-left: auto;
+            margin-right: auto;
+    
+        }
+
+        .container5 {
+    
+            text-align: left;
+            padding: 0.0cm;
+            margin: 2mm;
+            width: 5.5cm;
+
+        }
+        .container6 {
+            background-color: rgba(95, 128, 145, 0.63);
+            border-radius: 0.4cm;
+            align-items:center;
+            padding: 0.2cm;
+            margin: 0cm;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: fit-content;
+        }
+
+        .textTitle {
+
+            color: azure;
+            font-size: 1.5cm;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        .textTitle1 {
+
+            font-size: 1cm;
+            color: azure;
+            font-size: 0.8cm;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+
+        }
+        
+        .textTitle2 {
+            font-size: 0.5cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .table {
+
+            background-color: rgba(129, 155, 168, 0);
+            width: 80mm;
+
+
+        }
+
+        .textCard3 {
+            font-size: 1cm;
+            color: azure;
+            font-size: 0.4cm;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .textCard2 {
+            font-size: 0.6cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+
+        }
+
+        .textCard4 {
+            font-size: 0.45cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+
+        }
+        .textCard5 {
+            font-size: 0.45cm;
+            color: azure;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            
+
+        }
+
+        .row {
+            background-color: rgba(95, 128, 145, 0.63);
+            border-radius: 0.4cm;
+            padding: 0.2cm;
+            margin: 0cm;
+        }
+
+        .row1 {
+            background-color: rgba(56, 83, 97, 0.795);
+            border-radius: 0.4cm;
+            padding: 0.2cm;
+            margin: 0cm;
+        }
+        .row2 {
+            background-color: rgba(95, 128, 145, 0.63);
+            border-radius: 0.4cm;
+            padding: 0.2cm;
+            margin: 0cm;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+<div class="col-md-3" style="background-color:rgba(129, 155, 168, 0.521);" >
+    <div clas="card">
+        c
+    </div>
+ 
+</div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <!--INCUIR LA HERRAMIENTA JQUERY-->
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <!--LLAMADA A UN .JS DESDE HTML-->
+        <script src="../Operaciones/getMeteoData.js"></script>
+        <script src="../Operaciones/setStyleData.js"></script>
+</body>
+
+</html>
